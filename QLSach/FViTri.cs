@@ -56,5 +56,39 @@ namespace QuanLyThuVien.ThuThu
         {
             dtViTri.DataSource = vitridao.LoadViTri();
         }
+
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            // Lấy mã vị trí từ TextBox
+            string maVT = txtTimkiemvt.Text;
+
+            // Kiểm tra xem người dùng đã nhập mã vị trí hay chưa
+            if (string.IsNullOrEmpty(maVT))
+            {
+                MessageBox.Show("Vui lòng nhập mã vị trí cần tìm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Tìm kiếm vị trí trong cơ sở dữ liệu và hiển thị kết quả
+            DataTable dt = vitridao.TimKiemViTri(maVT);
+
+            // Kiểm tra kết quả tìm kiếm
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                // Gán kết quả tìm kiếm vào DataGridView
+                dtViTri.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy vị trí với mã: " + maVT, "Kết quả tìm kiếm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dtViTri.DataSource = null; // Xóa dữ liệu cũ nếu không tìm thấy kết quả
+            }
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            dtViTri.DataSource = vitridao.LoadViTri();
+        }
     }
 }

@@ -225,5 +225,8 @@
   <ItemGroup>
     <None Include="Resources\edit.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7808859_restart_refresh_reload_arrow_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

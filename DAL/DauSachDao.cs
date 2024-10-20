@@ -92,7 +92,7 @@ namespace QuanLyThuVien.DAL
                     DbConnection.Instance.OpenConnection();
                 }
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm đầu sách thành công!");
+                MessageBox.Show("Sửa đầu sách thành công!");
             }
             catch (Exception ex)
             {

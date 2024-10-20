@@ -63,6 +63,16 @@ namespace QuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _7808859_restart_refresh_reload_arrow_icon {
+            get {
+                object obj = ResourceManager.GetObject("7808859_restart_refresh_reload_arrow_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap anhnenthuvien {
             get {
                 object obj = ResourceManager.GetObject("anhnenthuvien", resourceCulture);

@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
+            this.txtTimkiemvt = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.txtKe = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
@@ -40,36 +40,37 @@
             this.lblMaDauSach = new Guna.UI.WinForms.GunaLabel();
             this.txtMaViTri = new Guna.UI.WinForms.GunaTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.txtKhuVuc = new Guna.UI.WinForms.GunaTextBox();
             this.dtViTri = new Guna.UI.WinForms.GunaDataGridView();
             this.btnThem = new Guna.UI.WinForms.GunaButton();
             this.btnSua = new Guna.UI.WinForms.GunaButton();
             this.btnXoa = new Guna.UI.WinForms.GunaButton();
+            this.btnReload = new Guna.UI.WinForms.GunaButton();
             this.btnTimKiem = new Guna.UI.WinForms.GunaButton();
-            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtViTri)).BeginInit();
             this.SuspendLayout();
             // 
-            // gunaTextBox1
+            // txtTimkiemvt
             // 
-            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox1.BorderSize = 1;
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.gunaTextBox1.Location = new System.Drawing.Point(312, 125);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.Radius = 10;
-            this.gunaTextBox1.SelectedText = "";
-            this.gunaTextBox1.Size = new System.Drawing.Size(266, 32);
-            this.gunaTextBox1.TabIndex = 20;
-            this.gunaTextBox1.Text = "Tìm kiếm ...";
+            this.txtTimkiemvt.BackColor = System.Drawing.Color.Transparent;
+            this.txtTimkiemvt.BaseColor = System.Drawing.Color.White;
+            this.txtTimkiemvt.BorderColor = System.Drawing.Color.Silver;
+            this.txtTimkiemvt.BorderSize = 1;
+            this.txtTimkiemvt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimkiemvt.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtTimkiemvt.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
+            this.txtTimkiemvt.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtTimkiemvt.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.txtTimkiemvt.Location = new System.Drawing.Point(312, 125);
+            this.txtTimkiemvt.Name = "txtTimkiemvt";
+            this.txtTimkiemvt.PasswordChar = '\0';
+            this.txtTimkiemvt.Radius = 10;
+            this.txtTimkiemvt.SelectedText = "";
+            this.txtTimkiemvt.Size = new System.Drawing.Size(266, 32);
+            this.txtTimkiemvt.TabIndex = 20;
+            this.txtTimkiemvt.Text = "Tìm kiếm ...";
             // 
             // gunaLabel4
             // 
@@ -162,9 +163,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnReload);
             this.panel1.Controls.Add(this.gunaLabel5);
             this.panel1.Controls.Add(this.btnTimKiem);
-            this.panel1.Controls.Add(this.gunaTextBox1);
+            this.panel1.Controls.Add(this.txtTimkiemvt);
             this.panel1.Controls.Add(this.gunaLabel4);
             this.panel1.Controls.Add(this.txtKe);
             this.panel1.Controls.Add(this.gunaLabel2);
@@ -177,6 +179,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(944, 160);
             this.panel1.TabIndex = 16;
+            // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
+            this.gunaLabel5.Location = new System.Drawing.Point(17, -3);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(154, 31);
+            this.gunaLabel5.TabIndex = 24;
+            this.gunaLabel5.Text = "Quản lý vị trí";
             // 
             // txtKhuVuc
             // 
@@ -329,6 +342,33 @@
             this.btnXoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
+            // btnReload
+            // 
+            this.btnReload.AnimationHoverSpeed = 0.07F;
+            this.btnReload.AnimationSpeed = 0.03F;
+            this.btnReload.BackColor = System.Drawing.Color.Transparent;
+            this.btnReload.BaseColor = System.Drawing.Color.White;
+            this.btnReload.BorderColor = System.Drawing.Color.Black;
+            this.btnReload.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnReload.FocusedColor = System.Drawing.Color.Empty;
+            this.btnReload.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReload.ForeColor = System.Drawing.Color.White;
+            this.btnReload.Image = global::QuanLyThuVien.Properties.Resources._7808859_restart_refresh_reload_arrow_icon;
+            this.btnReload.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnReload.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnReload.Location = new System.Drawing.Point(265, 125);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.OnHoverBaseColor = System.Drawing.Color.Cornsilk;
+            this.btnReload.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnReload.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnReload.OnHoverImage = null;
+            this.btnReload.OnPressedColor = System.Drawing.Color.Black;
+            this.btnReload.Radius = 10;
+            this.btnReload.Size = new System.Drawing.Size(32, 32);
+            this.btnReload.TabIndex = 25;
+            this.btnReload.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            // 
             // btnTimKiem
             // 
             this.btnTimKiem.AnimationHoverSpeed = 0.07F;
@@ -342,8 +382,8 @@
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.Image = global::QuanLyThuVien.Properties.Resources.find;
             this.btnTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnTimKiem.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTimKiem.Location = new System.Drawing.Point(584, 125);
+            this.btnTimKiem.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnTimKiem.Location = new System.Drawing.Point(593, 125);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.OnHoverBaseColor = System.Drawing.Color.Goldenrod;
             this.btnTimKiem.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -354,17 +394,7 @@
             this.btnTimKiem.Size = new System.Drawing.Size(48, 32);
             this.btnTimKiem.TabIndex = 21;
             this.btnTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
-            this.gunaLabel5.Location = new System.Drawing.Point(17, -3);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(154, 31);
-            this.gunaLabel5.TabIndex = 24;
-            this.gunaLabel5.Text = "Quản lý vị trí";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // FViTri
             // 
@@ -394,7 +424,7 @@
         private Guna.UI.WinForms.GunaButton btnThem;
         private Guna.UI.WinForms.GunaButton btnSua;
         private Guna.UI.WinForms.GunaButton btnTimKiem;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
+        private Guna.UI.WinForms.GunaTextBox txtTimkiemvt;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaTextBox txtKe;
         private Guna.UI.WinForms.GunaButton btnXoa;
@@ -407,5 +437,6 @@
         private Guna.UI.WinForms.GunaTextBox txtMaViTri;
         private Guna.UI.WinForms.GunaDataGridView dtViTri;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
+        private Guna.UI.WinForms.GunaButton btnReload;
     }
 }

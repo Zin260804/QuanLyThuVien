@@ -249,7 +249,7 @@
             this.txtTaiKhoan.SelectedText = "";
             this.txtTaiKhoan.Size = new System.Drawing.Size(319, 48);
             this.txtTaiKhoan.TabIndex = 1;
-            this.txtTaiKhoan.Text = "Tên đăng nhập";
+            this.txtTaiKhoan.Text = "admin";
             this.txtTaiKhoan.Enter += new System.EventHandler(this.txtTaiKhoan_Enter);
             this.txtTaiKhoan.Leave += new System.EventHandler(this.txtTaiKhoan_Leave);
             // 

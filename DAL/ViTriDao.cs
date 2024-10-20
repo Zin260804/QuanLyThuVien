@@ -103,5 +103,39 @@ namespace QuanLyThuVien.DAL
                 }
             }
         }
+        public DataTable TimKiemViTri(string maVT)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Proc_TimKiemViTri", DbConnection.conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@MaVT", SqlDbType.NVarChar, 10).Value = maVT;
+
+                if (DbConnection.conn.State == ConnectionState.Closed)
+                {
+                    DbConnection.Instance.OpenConnection();
+                }
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                return dt; // Trả về kết quả tìm kiếm dưới dạng DataTable
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                if (DbConnection.conn.State == ConnectionState.Open)
+                {
+                    DbConnection.Instance.CloseConnection();
+                }
+            }
+        }
+
+
     }
 }
