@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,7 @@ namespace QuanLyThuVien.ThuThu
         {
             ViTri vitri = new ViTri(txtMaViTri.Text, txtKhuVuc.Text,
             txtKe.Text, txtNgan.Text);
-            vitridao.ThemViTri(vitri);
+            vitridao.XoaViTri(vitri);
             FViTri_Load(sender, e);
         }
 
@@ -55,40 +56,46 @@ namespace QuanLyThuVien.ThuThu
         private void FViTri_Load(object sender, EventArgs e)
         {
             dtViTri.DataSource = vitridao.LoadViTri();
+            SqlCommand cmd = new SqlCommand("Proc_ThemViTri_AutoMaVT", DbConnection.conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            if (DbConnection.conn.State == ConnectionState.Closed)
+            {
+                DbConnection.Instance.OpenConnection();
+            }
+            var result = cmd.ExecuteScalar();
+            txtMaViTri.Text = result != null ? result.ToString() : "VT1"; 
+
+            DbConnection.Instance.CloseConnection();
         }
 
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            // Lấy mã vị trí từ TextBox
             string maVT = txtTimkiemvt.Text;
 
-            // Kiểm tra xem người dùng đã nhập mã vị trí hay chưa
             if (string.IsNullOrEmpty(maVT))
             {
                 MessageBox.Show("Vui lòng nhập mã vị trí cần tìm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Tìm kiếm vị trí trong cơ sở dữ liệu và hiển thị kết quả
             DataTable dt = vitridao.TimKiemViTri(maVT);
 
-            // Kiểm tra kết quả tìm kiếm
             if (dt != null && dt.Rows.Count > 0)
             {
-                // Gán kết quả tìm kiếm vào DataGridView
                 dtViTri.DataSource = dt;
             }
             else
             {
                 MessageBox.Show("Không tìm thấy vị trí với mã: " + maVT, "Kết quả tìm kiếm", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dtViTri.DataSource = null; // Xóa dữ liệu cũ nếu không tìm thấy kết quả
+                dtViTri.DataSource = null; 
             }
         }
 
         private void btnReload_Click(object sender, EventArgs e)
         {
             dtViTri.DataSource = vitridao.LoadViTri();
+            FViTri_Load(sender, e);
         }
     }
 }

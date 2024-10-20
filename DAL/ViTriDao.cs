@@ -22,18 +22,18 @@ namespace QuanLyThuVien.DAL
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("Proc_ThemViTri", DbConnection.conn);
+                SqlCommand cmd = new SqlCommand("Proc_ThemViTri_AutoMaVT", DbConnection.conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@MaVT", SqlDbType.NVarChar, 10).Value = vitri.Mavt;
-                cmd.Parameters.Add("@KhuVuc", SqlDbType.NVarChar, 100).Value = vitri.Khuvuc;
-                cmd.Parameters.Add("@Ke", SqlDbType.NVarChar, 50).Value = vitri.Ke;
-                cmd.Parameters.Add("@Ngan", SqlDbType.NVarChar, 10).Value = vitri.Ngan;          
+                cmd.Parameters.Add("@KhuVuc", SqlDbType.NVarChar, 20).Value = vitri.Khuvuc;
+                cmd.Parameters.Add("@Ke", SqlDbType.NVarChar, 20).Value = vitri.Ke;
+                cmd.Parameters.Add("@Ngan", SqlDbType.NVarChar, 20).Value = vitri.Ngan;
                 if (DbConnection.conn.State == ConnectionState.Closed)
                 {
                     DbConnection.Instance.OpenConnection();
                 }
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm vị trí thành công!");
+
+                var result = cmd.ExecuteScalar();
+                MessageBox.Show("Thêm vị trí thành công với mã: " + result.ToString());
             }
             catch (Exception ex)
             {
@@ -48,12 +48,14 @@ namespace QuanLyThuVien.DAL
                 }
             }
         }
-        public void XoaViTri(DauSach dausach)
+
+        public void XoaViTri(ViTri vitri)
         {
             try
             {
                 SqlCommand cmd = new SqlCommand("Proc_XoaViTri", DbConnection.conn);
-                cmd.CommandType = CommandType.StoredProcedure;  
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@MaVT", SqlDbType.NVarChar, 10).Value = vitri.Mavt;
                 if (DbConnection.conn.State == ConnectionState.Closed)
                 {
                     DbConnection.Instance.OpenConnection();
@@ -107,8 +109,8 @@ namespace QuanLyThuVien.DAL
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("Proc_TimKiemViTri", DbConnection.conn);
-                cmd.CommandType = CommandType.StoredProcedure;
+                string query = "SELECT * FROM Func_TimKiemViTri(@MaVT)";
+                SqlCommand cmd = new SqlCommand(query, DbConnection.conn);
                 cmd.Parameters.Add("@MaVT", SqlDbType.NVarChar, 10).Value = maVT;
 
                 if (DbConnection.conn.State == ConnectionState.Closed)
@@ -120,7 +122,7 @@ namespace QuanLyThuVien.DAL
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                return dt; // Trả về kết quả tìm kiếm dưới dạng DataTable
+                return dt; 
             }
             catch (Exception ex)
             {
@@ -135,6 +137,7 @@ namespace QuanLyThuVien.DAL
                 }
             }
         }
+
 
 
     }
