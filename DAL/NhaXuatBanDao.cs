@@ -22,7 +22,7 @@ namespace QuanLyThuVien.DAL
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("proc_ThemNhaXuatBan", DbConnection.conn);
+                SqlCommand cmd = new SqlCommand("Proc_ThemNhaXuatBan", DbConnection.conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@Ten", SqlDbType.NVarChar, 100).Value = nhaxuatban.Ten;
                 cmd.Parameters.Add("@DiaChi", SqlDbType.NVarChar, 255).Value = nhaxuatban.Diachi;
@@ -111,7 +111,7 @@ namespace QuanLyThuVien.DAL
             DataTable dataTable = new DataTable();
             try
             {
-                using (SqlCommand cmd = new SqlCommand("proc_searchNhaXuatBan", DbConnection.conn))
+                using (SqlCommand cmd = new SqlCommand("proc_TimNhaXuatBan", DbConnection.conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@Ten", SqlDbType.NVarChar, 100).Value = ten;

@@ -61,11 +61,27 @@ namespace QuanLyThuVien.ThuThu
             txtSdt.Text = selectedRow.Cells["Sdt"].Value.ToString();
         }
 
-        private void txtsearch_KeyUp(object sender, KeyEventArgs e)
+        private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            string searchText = txtsearch.Text.Trim();
+            string searchText = txtSearch.Text.Trim();
             DataTable result = dao.TimNhaxuatban(searchText);
             dtNhaXuatBan.DataSource = result;
+        }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            string searchText = txtSearch.Text.Trim();
+            DataTable result = dao.TimNhaxuatban(searchText);
+            dtNhaXuatBan.DataSource = result;
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            txtMaNXB.Text = "";
+            txtDiaChi.Text = "";
+            txtSdt.Text = "";
+            txtEmail.Text = "";
+            txtTenNXB.Text = "";
         }
     }
 }

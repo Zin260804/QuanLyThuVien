@@ -40,3 +40,24 @@ D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreComp
 D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CopyComplete
 D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 D:\Học kì 1_năm 3\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+F:\DBMS\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+F:\DBMS\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+F:\DBMS\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+F:\DBMS\QuanLyThuVien\bin\Debug\Guna.UI.dll
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.AssemblyReference.cache
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.DAL.FDangNhap.resources
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FCuonSach.resources
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FCuonSachViTri.resources
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FDocGia.resources
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FDauSach.resources
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FManHinhChinh.resources
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FNhaXuatBan.resources
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FTacGIa.resources
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FViTri.resources
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.UCMenu.resources
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CopyComplete
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb

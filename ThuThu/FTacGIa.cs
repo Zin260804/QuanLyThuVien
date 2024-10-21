@@ -54,5 +54,7 @@ namespace QuanLyThuVien.ThuThu
             txtEmail.Text = selectedRow.Cells["Email"].Value.ToString();
             txtSdt.Text = selectedRow.Cells["Sdt"].Value.ToString();     
         }
+
+      
     }
 }

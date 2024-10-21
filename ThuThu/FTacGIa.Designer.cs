@@ -63,7 +63,7 @@
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Image = global::QuanLyThuVien.Properties.Resources.plus;
             this.btnThem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThem.Location = new System.Drawing.Point(815, 606);
+            this.btnThem.Location = new System.Drawing.Point(815, 631);
             this.btnThem.Name = "btnThem";
             this.btnThem.OnHoverBaseColor = System.Drawing.Color.Goldenrod;
             this.btnThem.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -88,7 +88,7 @@
             this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.Image = global::QuanLyThuVien.Properties.Resources.edit;
             this.btnSua.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSua.Location = new System.Drawing.Point(433, 606);
+            this.btnSua.Location = new System.Drawing.Point(457, 631);
             this.btnSua.Name = "btnSua";
             this.btnSua.OnHoverBaseColor = System.Drawing.Color.Goldenrod;
             this.btnSua.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -160,7 +160,7 @@
             // 
             this.gunaLabel6.AutoSize = true;
             this.gunaLabel6.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel6.Location = new System.Drawing.Point(722, 20);
+            this.gunaLabel6.Location = new System.Drawing.Point(696, 11);
             this.gunaLabel6.Name = "gunaLabel6";
             this.gunaLabel6.Size = new System.Drawing.Size(99, 19);
             this.gunaLabel6.TabIndex = 27;
@@ -175,18 +175,18 @@
             this.txtSdt.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
             this.txtSdt.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtSdt.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSdt.Location = new System.Drawing.Point(726, 33);
+            this.txtSdt.Location = new System.Drawing.Point(700, 33);
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.PasswordChar = '\0';
             this.txtSdt.SelectedText = "";
-            this.txtSdt.Size = new System.Drawing.Size(195, 32);
+            this.txtSdt.Size = new System.Drawing.Size(221, 32);
             this.txtSdt.TabIndex = 26;
             // 
             // gunaLabel7
             // 
             this.gunaLabel7.AutoSize = true;
             this.gunaLabel7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel7.Location = new System.Drawing.Point(214, 20);
+            this.gunaLabel7.Location = new System.Drawing.Point(188, 11);
             this.gunaLabel7.Name = "gunaLabel7";
             this.gunaLabel7.Size = new System.Drawing.Size(38, 19);
             this.gunaLabel7.TabIndex = 25;
@@ -201,18 +201,18 @@
             this.txtTen.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
             this.txtTen.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtTen.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTen.Location = new System.Drawing.Point(218, 33);
+            this.txtTen.Location = new System.Drawing.Point(192, 33);
             this.txtTen.Name = "txtTen";
             this.txtTen.PasswordChar = '\0';
             this.txtTen.SelectedText = "";
-            this.txtTen.Size = new System.Drawing.Size(195, 32);
+            this.txtTen.Size = new System.Drawing.Size(221, 32);
             this.txtTen.TabIndex = 24;
             // 
             // gunaLabel8
             // 
             this.gunaLabel8.AutoSize = true;
             this.gunaLabel8.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel8.Location = new System.Drawing.Point(468, 20);
+            this.gunaLabel8.Location = new System.Drawing.Point(442, 11);
             this.gunaLabel8.Name = "gunaLabel8";
             this.gunaLabel8.Size = new System.Drawing.Size(49, 19);
             this.gunaLabel8.TabIndex = 23;
@@ -227,18 +227,18 @@
             this.txtEmail.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
             this.txtEmail.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(472, 33);
+            this.txtEmail.Location = new System.Drawing.Point(446, 33);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(195, 32);
+            this.txtEmail.Size = new System.Drawing.Size(221, 32);
             this.txtEmail.TabIndex = 22;
             // 
             // gunaLabel9
             // 
             this.gunaLabel9.AutoSize = true;
             this.gunaLabel9.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel9.Location = new System.Drawing.Point(23, 20);
+            this.gunaLabel9.Location = new System.Drawing.Point(23, 11);
             this.gunaLabel9.Name = "gunaLabel9";
             this.gunaLabel9.Size = new System.Drawing.Size(79, 19);
             this.gunaLabel9.TabIndex = 21;
@@ -294,7 +294,7 @@
             this.dtTacGia.RowHeadersWidth = 51;
             this.dtTacGia.RowTemplate.Height = 24;
             this.dtTacGia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtTacGia.Size = new System.Drawing.Size(944, 392);
+            this.dtTacGia.Size = new System.Drawing.Size(944, 435);
             this.dtTacGia.TabIndex = 25;
             this.dtTacGia.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dtTacGia.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -352,7 +352,7 @@
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Image = global::QuanLyThuVien.Properties.Resources.bin;
             this.btnXoa.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXoa.Location = new System.Drawing.Point(624, 606);
+            this.btnXoa.Location = new System.Drawing.Point(636, 631);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.OnHoverBaseColor = System.Drawing.Color.Goldenrod;
             this.btnXoa.OnHoverBorderColor = System.Drawing.Color.Black;
