@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
             this.dtpNgaySinh = new Guna.UI.WinForms.GunaDateTimePicker();
@@ -38,7 +38,7 @@
             this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
             this.txtEmail = new Guna.UI.WinForms.GunaTextBox();
             this.btnTimKiem = new Guna.UI.WinForms.GunaButton();
-            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
+            this.txtTimKiem = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.txtSoDienThoai = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
@@ -72,7 +72,7 @@
             this.panel1.Controls.Add(this.gunaLabel12);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.btnTimKiem);
-            this.panel1.Controls.Add(this.gunaTextBox1);
+            this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.gunaLabel8);
             this.panel1.Controls.Add(this.txtSoDienThoai);
             this.panel1.Controls.Add(this.gunaLabel9);
@@ -86,7 +86,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(944, 194);
             this.panel1.TabIndex = 21;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // gunaLabel13
             // 
@@ -183,25 +182,26 @@
             this.btnTimKiem.TabIndex = 33;
             this.btnTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // gunaTextBox1
+            // txtTimKiem
             // 
-            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox1.BorderSize = 1;
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.gunaTextBox1.Location = new System.Drawing.Point(312, 154);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.Radius = 10;
-            this.gunaTextBox1.SelectedText = "";
-            this.gunaTextBox1.Size = new System.Drawing.Size(266, 32);
-            this.gunaTextBox1.TabIndex = 32;
-            this.gunaTextBox1.Text = "Tìm kiếm ...";
+            this.txtTimKiem.BackColor = System.Drawing.Color.Transparent;
+            this.txtTimKiem.BaseColor = System.Drawing.Color.White;
+            this.txtTimKiem.BorderColor = System.Drawing.Color.Silver;
+            this.txtTimKiem.BorderSize = 1;
+            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiem.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtTimKiem.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
+            this.txtTimKiem.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtTimKiem.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.txtTimKiem.Location = new System.Drawing.Point(312, 154);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PasswordChar = '\0';
+            this.txtTimKiem.Radius = 10;
+            this.txtTimKiem.SelectedText = "";
+            this.txtTimKiem.Size = new System.Drawing.Size(266, 32);
+            this.txtTimKiem.TabIndex = 32;
+            this.txtTimKiem.Text = "Tìm kiếm ...";
+            this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
             // 
             // gunaLabel8
             // 
@@ -330,21 +330,21 @@
             // 
             // dtDocGia
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dtDocGia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtDocGia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtDocGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtDocGia.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dtDocGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtDocGia.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtDocGia.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtDocGia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtDocGia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtDocGia.ColumnHeadersHeight = 20;
             this.dtDocGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDG,
@@ -354,14 +354,14 @@
             this.Sdt,
             this.Email,
             this.NgaySinh});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtDocGia.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtDocGia.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtDocGia.EnableHeadersVisualStyles = false;
             this.dtDocGia.GridColor = System.Drawing.Color.White;
             this.dtDocGia.Location = new System.Drawing.Point(31, 212);
@@ -550,7 +550,7 @@
         private Guna.UI.WinForms.GunaButton btnXoa;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI.WinForms.GunaButton btnTimKiem;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
+        private Guna.UI.WinForms.GunaTextBox txtTimKiem;
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaTextBox txtSoDienThoai;

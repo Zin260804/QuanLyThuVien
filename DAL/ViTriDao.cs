@@ -23,8 +23,7 @@ namespace QuanLyThuVien.DAL
             try
             {
                 SqlCommand cmd = new SqlCommand("Proc_ThemViTri", DbConnection.conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@MaVT", SqlDbType.NVarChar, 10).Value = vitri.Mavt;
+                cmd.CommandType = CommandType.StoredProcedure;            
                 cmd.Parameters.Add("@KhuVuc", SqlDbType.NVarChar, 100).Value = vitri.Khuvuc;
                 cmd.Parameters.Add("@Ke", SqlDbType.NVarChar, 50).Value = vitri.Ke;
                 cmd.Parameters.Add("@Ngan", SqlDbType.NVarChar, 10).Value = vitri.Ngan;          
@@ -48,12 +47,13 @@ namespace QuanLyThuVien.DAL
                 }
             }
         }
-        public void XoaViTri(DauSach dausach)
+        public void XoaViTri(ViTri vitri)
         {
             try
             {
                 SqlCommand cmd = new SqlCommand("Proc_XoaViTri", DbConnection.conn);
-                cmd.CommandType = CommandType.StoredProcedure;  
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@MaVT", SqlDbType.NVarChar, 100).Value = vitri.Mavt;
                 if (DbConnection.conn.State == ConnectionState.Closed)
                 {
                     DbConnection.Instance.OpenConnection();
@@ -97,6 +97,38 @@ namespace QuanLyThuVien.DAL
             finally
             {
 
+                if (DbConnection.conn.State == ConnectionState.Open)
+                {
+                    DbConnection.Instance.CloseConnection();
+                }
+            }
+        }
+        public DataTable TimKiemViTri(string maVT)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Proc_TimKiemViTri", DbConnection.conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@MaVT", SqlDbType.NVarChar, 10).Value = maVT;
+
+                if (DbConnection.conn.State == ConnectionState.Closed)
+                {
+                    DbConnection.Instance.OpenConnection();
+                }
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                return dt; 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+                return null;
+            }
+            finally
+            {
                 if (DbConnection.conn.State == ConnectionState.Open)
                 {
                     DbConnection.Instance.CloseConnection();

@@ -21,7 +21,7 @@ namespace QuanLyThuVien.DAL
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("Proc_ThemDauSach", DbConnection.conn);
+                SqlCommand cmd = new SqlCommand("Proc_ThemCuonSach", DbConnection.conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@MaCS", SqlDbType.NVarChar, 10).Value = cuonsach.Macs;
                 cmd.Parameters.Add("@MaDS", SqlDbType.NVarChar, 100).Value = cuonsach.Mads;
@@ -77,7 +77,7 @@ namespace QuanLyThuVien.DAL
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("Proc_SuaDauSach", DbConnection.conn);
+                SqlCommand cmd = new SqlCommand("Proc_SuaCuonSach", DbConnection.conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@MaDS", SqlDbType.NVarChar, 10).Value = cuonsach.Macs;
                 cmd.Parameters.Add("@MaDS", SqlDbType.NVarChar, 100).Value = cuonsach.Mads;

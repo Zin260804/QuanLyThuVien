@@ -24,7 +24,7 @@ namespace QuanLyThuVien.DAL
             {
                 SqlCommand cmd = new SqlCommand("Proc_ThemTacGia", DbConnection.conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@MaTG", SqlDbType.NVarChar, 10).Value = tacgia.Matg;
+              
                 cmd.Parameters.Add("@Ten", SqlDbType.NVarChar, 100).Value = tacgia.Ten;
                 cmd.Parameters.Add("@Sdt", SqlDbType.NVarChar, 10).Value = tacgia.Std;
                 cmd.Parameters.Add("@Email", SqlDbType.VarChar, 100).Value = tacgia.Email;
@@ -104,6 +104,30 @@ namespace QuanLyThuVien.DAL
                     DbConnection.Instance.CloseConnection();
                 }
             }
+        }
+        public void TimKiemTacGia(string tacgia, DataGridView dvg)
+        {
+            try
+            {
+                DbConnection.Instance.OpenConnection();
+                using (SqlCommand command = new SqlCommand("SELECT * FROM Func_TimKiemTacGia(@Ten)", DbConnection.conn))
+                {
+                    command.Parameters.AddWithValue("@Ten", tacgia);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    dvg.DataSource = dataTable;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                DbConnection.conn.Close();
+            }
+
         }
     }
 }

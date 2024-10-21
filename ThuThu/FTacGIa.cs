@@ -54,7 +54,10 @@ namespace QuanLyThuVien.ThuThu
             txtEmail.Text = selectedRow.Cells["Email"].Value.ToString();
             txtSdt.Text = selectedRow.Cells["Sdt"].Value.ToString();     
         }
-
-      
+        private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
+        {
+            string keyword = txtTimKiem.Text.Trim();
+            tacgiadao.TimKiemTacGia(keyword, dtTacGia);
+        }
     }
 }

@@ -26,8 +26,7 @@ namespace QuanLyThuVien.DAL
                 DbConnection.Instance.OpenConnection();
                 using (SqlCommand command = new SqlCommand("Proc_ThemDocGia", DbConnection.conn))
                 {
-                    command.CommandType = System.Data.CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@MaDG", dg.Ma);
+                    command.CommandType = System.Data.CommandType.StoredProcedure;                  
                     command.Parameters.AddWithValue("@GioiTinh", dg.Gioitinh);
                     command.Parameters.AddWithValue("@Ten", dg.Ten);
                     command.Parameters.AddWithValue("@DiaChi", dg.Diachi);
@@ -119,6 +118,29 @@ namespace QuanLyThuVien.DAL
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                DbConnection.conn.Close();
+            }
+        }
+        public void TimKiemDocGia(string DocGia, DataGridView dvg)
+        {
+            try
+            {
+                DbConnection.Instance.OpenConnection();
+                using (SqlCommand command = new SqlCommand("SELECT * FROM Func_TimKiemDocGia(@Ten)", DbConnection.conn))
+                {
+                    command.Parameters.AddWithValue("@Ten", DocGia);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    dvg.DataSource = dataTable;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
             finally
             {

@@ -23,7 +23,7 @@ namespace QuanLyThuVien.ThuThu
         {
             ViTri vitri = new ViTri(txtMaViTri.Text, txtKhuVuc.Text,
             txtKe.Text, txtNgan.Text);
-            vitridao.ThemViTri(vitri);
+            vitridao.XoaViTri(vitri);
             FViTri_Load(sender, e);
         }
 
@@ -55,6 +55,35 @@ namespace QuanLyThuVien.ThuThu
         private void FViTri_Load(object sender, EventArgs e)
         {
             dtViTri.DataSource = vitridao.LoadViTri();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string maVT = txtTimKiem.Text;
+
+            if (string.IsNullOrEmpty(maVT))
+            {
+                MessageBox.Show("Vui lòng nhập mã vị trí cần tìm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DataTable dt = vitridao.TimKiemViTri(maVT);
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                dtViTri.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy vị trí với mã: " + maVT, "Kết quả tìm kiếm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dtViTri.DataSource = null;
+            }
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            dtViTri.DataSource = vitridao.LoadViTri();
+            FViTri_Load(sender, e);
         }
     }
 }
