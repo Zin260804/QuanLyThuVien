@@ -32,8 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnTimKiem = new Guna.UI.WinForms.GunaButton();
-            this.txtTimkiem = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.txtDiaChi = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
@@ -55,8 +55,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.guna2TextBox1);
             this.panel1.Controls.Add(this.btnTimKiem);
-            this.panel1.Controls.Add(this.txtTimkiem);
             this.panel1.Controls.Add(this.gunaLabel5);
             this.panel1.Controls.Add(this.txtDiaChi);
             this.panel1.Controls.Add(this.gunaLabel6);
@@ -73,6 +73,27 @@
             this.panel1.Size = new System.Drawing.Size(944, 160);
             this.panel1.TabIndex = 16;
             // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.BorderRadius = 10;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(314, 124);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "Tìm kiếm...";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(266, 32);
+            this.guna2TextBox1.TabIndex = 36;
+            // 
             // btnTimKiem
             // 
             this.btnTimKiem.AnimationHoverSpeed = 0.07F;
@@ -87,7 +108,7 @@
             this.btnTimKiem.Image = global::QuanLyThuVien.Properties.Resources.find;
             this.btnTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnTimKiem.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTimKiem.Location = new System.Drawing.Point(586, 125);
+            this.btnTimKiem.Location = new System.Drawing.Point(588, 124);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.OnHoverBaseColor = System.Drawing.Color.Goldenrod;
             this.btnTimKiem.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -98,26 +119,6 @@
             this.btnTimKiem.Size = new System.Drawing.Size(48, 32);
             this.btnTimKiem.TabIndex = 35;
             this.btnTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtTimkiem
-            // 
-            this.txtTimkiem.BackColor = System.Drawing.Color.Transparent;
-            this.txtTimkiem.BaseColor = System.Drawing.Color.White;
-            this.txtTimkiem.BorderColor = System.Drawing.Color.Silver;
-            this.txtTimkiem.BorderSize = 1;
-            this.txtTimkiem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTimkiem.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtTimkiem.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
-            this.txtTimkiem.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtTimkiem.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.txtTimkiem.Location = new System.Drawing.Point(314, 125);
-            this.txtTimkiem.Name = "txtTimkiem";
-            this.txtTimkiem.PasswordChar = '\0';
-            this.txtTimkiem.Radius = 10;
-            this.txtTimkiem.SelectedText = "";
-            this.txtTimkiem.Size = new System.Drawing.Size(266, 32);
-            this.txtTimkiem.TabIndex = 34;
-            this.txtTimkiem.Text = "Tìm kiếm...";
             // 
             // gunaLabel5
             // 
@@ -424,6 +425,6 @@
         private Guna.UI.WinForms.GunaTextBox txtMaNXB;
         private Guna.UI.WinForms.GunaDataGridView dtNhaXuatBan;
         private Guna.UI.WinForms.GunaButton btnTimKiem;
-        private Guna.UI.WinForms.GunaTextBox txtTimkiem;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
     }
 }

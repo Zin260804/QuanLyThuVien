@@ -97,5 +97,7 @@ namespace QuanLyThuVien.ThuThu
             dtViTri.DataSource = vitridao.LoadViTri();
             FViTri_Load(sender, e);
         }
+
+        
     }
 }
