@@ -65,5 +65,11 @@ namespace QuanLyThuVien.ThuThu
         {
 
         }
+
+        private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
+        {
+            string keyword = txtTimKiem.Text.Trim();
+            daodg.TimKiemDocGia(keyword, dtDocGia);
+        }
     }
 }

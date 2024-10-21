@@ -34,7 +34,7 @@
             this.btnThem = new Guna.UI.WinForms.GunaButton();
             this.btnSua = new Guna.UI.WinForms.GunaButton();
             this.btnTimKiem = new Guna.UI.WinForms.GunaButton();
-            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
+            this.txtTimKiem = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.txtSdt = new Guna.UI.WinForms.GunaTextBox();
@@ -127,25 +127,26 @@
             this.btnTimKiem.TabIndex = 35;
             this.btnTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // gunaTextBox1
+            // txtTimKiem
             // 
-            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox1.BorderSize = 1;
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.gunaTextBox1.Location = new System.Drawing.Point(314, 125);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.Radius = 10;
-            this.gunaTextBox1.SelectedText = "";
-            this.gunaTextBox1.Size = new System.Drawing.Size(266, 32);
-            this.gunaTextBox1.TabIndex = 34;
-            this.gunaTextBox1.Text = "Tìm kiếm ...";
+            this.txtTimKiem.BackColor = System.Drawing.Color.Transparent;
+            this.txtTimKiem.BaseColor = System.Drawing.Color.White;
+            this.txtTimKiem.BorderColor = System.Drawing.Color.Silver;
+            this.txtTimKiem.BorderSize = 1;
+            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiem.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtTimKiem.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
+            this.txtTimKiem.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtTimKiem.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.txtTimKiem.Location = new System.Drawing.Point(314, 125);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PasswordChar = '\0';
+            this.txtTimKiem.Radius = 10;
+            this.txtTimKiem.SelectedText = "";
+            this.txtTimKiem.Size = new System.Drawing.Size(266, 32);
+            this.txtTimKiem.TabIndex = 34;
+            this.txtTimKiem.Text = "Tìm kiếm ...";
+            this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
             // 
             // gunaLabel5
             // 
@@ -324,7 +325,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnTimKiem);
-            this.panel1.Controls.Add(this.gunaTextBox1);
+            this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.gunaLabel5);
             this.panel1.Controls.Add(this.gunaLabel6);
             this.panel1.Controls.Add(this.txtSdt);
@@ -392,7 +393,7 @@
         private Guna.UI.WinForms.GunaButton btnThem;
         private Guna.UI.WinForms.GunaButton btnSua;
         private Guna.UI.WinForms.GunaButton btnTimKiem;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
+        private Guna.UI.WinForms.GunaTextBox txtTimKiem;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
         private Guna.UI.WinForms.GunaTextBox txtSdt;
