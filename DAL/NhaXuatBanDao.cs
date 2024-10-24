@@ -111,9 +111,9 @@ namespace QuanLyThuVien.DAL
             DataTable dataTable = new DataTable();
             try
             {
-                using (SqlCommand cmd = new SqlCommand("proc_TimNhaXuatBan", DbConnection.conn))
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM func_TimNhaXuatBan(@Ten)", DbConnection.conn))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.Text;
                     cmd.Parameters.Add("@Ten", SqlDbType.NVarChar, 100).Value = ten;
 
                     if (DbConnection.conn.State == ConnectionState.Closed)
