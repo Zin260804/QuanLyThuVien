@@ -32,15 +32,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtMaCS = new Guna.UI.WinForms.GunaTextBox();
+            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
+            this.btnTimKiem = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.txtMaVT = new Guna.UI.WinForms.GunaTextBox();
             this.lblMaDauSach = new Guna.UI.WinForms.GunaLabel();
             this.txtMaDS = new Guna.UI.WinForms.GunaTextBox();
             this.lblMaCuonSach = new Guna.UI.WinForms.GunaLabel();
             this.dtCuonSach = new Guna.UI.WinForms.GunaDataGridView();
-            this.btnLamMoi = new Guna.UI.WinForms.GunaButton();
-            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.MaCS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,11 +49,10 @@
             this.TheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NhaXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLamMoi = new Guna.UI.WinForms.GunaButton();
             this.btnThem = new Guna.UI.WinForms.GunaButton();
             this.btnXoa = new Guna.UI.WinForms.GunaButton();
             this.btnSua = new Guna.UI.WinForms.GunaButton();
-            this.btnTimKiem = new Guna.UI.WinForms.GunaButton();
-            this.txtMaCS = new Guna.UI.WinForms.GunaTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtCuonSach)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +73,46 @@
             this.panel1.Size = new System.Drawing.Size(944, 187);
             this.panel1.TabIndex = 16;
             // 
+            // txtMaCS
+            // 
+            this.txtMaCS.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtMaCS.BorderColor = System.Drawing.Color.Silver;
+            this.txtMaCS.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaCS.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtMaCS.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
+            this.txtMaCS.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtMaCS.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaCS.ForeColor = System.Drawing.Color.Black;
+            this.txtMaCS.Location = new System.Drawing.Point(27, 68);
+            this.txtMaCS.Name = "txtMaCS";
+            this.txtMaCS.PasswordChar = '\0';
+            this.txtMaCS.ReadOnly = true;
+            this.txtMaCS.SelectedText = "";
+            this.txtMaCS.Size = new System.Drawing.Size(136, 32);
+            this.txtMaCS.TabIndex = 44;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.BorderRadius = 10;
+            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiem.DefaultText = "";
+            this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.Location = new System.Drawing.Point(303, 145);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PasswordChar = '\0';
+            this.txtTimKiem.PlaceholderText = "Tìm kiếm";
+            this.txtTimKiem.SelectedText = "";
+            this.txtTimKiem.Size = new System.Drawing.Size(285, 32);
+            this.txtTimKiem.TabIndex = 37;
+            this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
+            // 
             // gunaLabel5
             // 
             this.gunaLabel5.AutoSize = true;
@@ -83,6 +123,32 @@
             this.gunaLabel5.Size = new System.Drawing.Size(211, 31);
             this.gunaLabel5.TabIndex = 23;
             this.gunaLabel5.Text = "Quản lý cuốn sách";
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.AnimationHoverSpeed = 0.07F;
+            this.btnTimKiem.AnimationSpeed = 0.03F;
+            this.btnTimKiem.BackColor = System.Drawing.Color.Transparent;
+            this.btnTimKiem.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
+            this.btnTimKiem.BorderColor = System.Drawing.Color.Black;
+            this.btnTimKiem.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnTimKiem.FocusedColor = System.Drawing.Color.Empty;
+            this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Image = global::QuanLyThuVien.Properties.Resources.find;
+            this.btnTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnTimKiem.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnTimKiem.Location = new System.Drawing.Point(594, 145);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.OnHoverBaseColor = System.Drawing.Color.Goldenrod;
+            this.btnTimKiem.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnTimKiem.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.OnHoverImage = null;
+            this.btnTimKiem.OnPressedColor = System.Drawing.Color.Black;
+            this.btnTimKiem.Radius = 10;
+            this.btnTimKiem.Size = new System.Drawing.Size(48, 32);
+            this.btnTimKiem.TabIndex = 21;
+            this.btnTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gunaLabel4
             // 
@@ -214,52 +280,6 @@
             this.dtCuonSach.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtCuonSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtCuonSach_CellClick);
             // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.AnimationHoverSpeed = 0.07F;
-            this.btnLamMoi.AnimationSpeed = 0.03F;
-            this.btnLamMoi.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
-            this.btnLamMoi.BorderColor = System.Drawing.Color.Black;
-            this.btnLamMoi.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnLamMoi.FocusedColor = System.Drawing.Color.Empty;
-            this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.Image = global::QuanLyThuVien.Properties.Resources.refresh;
-            this.btnLamMoi.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLamMoi.Location = new System.Drawing.Point(284, 631);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.OnHoverBaseColor = System.Drawing.Color.Goldenrod;
-            this.btnLamMoi.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnLamMoi.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.OnHoverImage = null;
-            this.btnLamMoi.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLamMoi.Size = new System.Drawing.Size(160, 42);
-            this.btnLamMoi.TabIndex = 27;
-            this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.BorderRadius = 10;
-            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTimKiem.DefaultText = "";
-            this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimKiem.Location = new System.Drawing.Point(303, 145);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.PasswordChar = '\0';
-            this.txtTimKiem.PlaceholderText = "Tìm kiếm";
-            this.txtTimKiem.SelectedText = "";
-            this.txtTimKiem.Size = new System.Drawing.Size(285, 32);
-            this.txtTimKiem.TabIndex = 37;
-            this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
-            // 
             // MaCS
             // 
             this.MaCS.DataPropertyName = "MaCS";
@@ -308,6 +328,30 @@
             this.TacGia.HeaderText = "Tác giả";
             this.TacGia.MinimumWidth = 6;
             this.TacGia.Name = "TacGia";
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.AnimationHoverSpeed = 0.07F;
+            this.btnLamMoi.AnimationSpeed = 0.03F;
+            this.btnLamMoi.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
+            this.btnLamMoi.BorderColor = System.Drawing.Color.Black;
+            this.btnLamMoi.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLamMoi.FocusedColor = System.Drawing.Color.Empty;
+            this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.Image = global::QuanLyThuVien.Properties.Resources.refresh;
+            this.btnLamMoi.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnLamMoi.Location = new System.Drawing.Point(284, 631);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.OnHoverBaseColor = System.Drawing.Color.Goldenrod;
+            this.btnLamMoi.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnLamMoi.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.OnHoverImage = null;
+            this.btnLamMoi.OnPressedColor = System.Drawing.Color.Black;
+            this.btnLamMoi.Size = new System.Drawing.Size(160, 42);
+            this.btnLamMoi.TabIndex = 27;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnThem
             // 
@@ -383,50 +427,6 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.AnimationHoverSpeed = 0.07F;
-            this.btnTimKiem.AnimationSpeed = 0.03F;
-            this.btnTimKiem.BackColor = System.Drawing.Color.Transparent;
-            this.btnTimKiem.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
-            this.btnTimKiem.BorderColor = System.Drawing.Color.Black;
-            this.btnTimKiem.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnTimKiem.FocusedColor = System.Drawing.Color.Empty;
-            this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Image = global::QuanLyThuVien.Properties.Resources.find;
-            this.btnTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnTimKiem.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTimKiem.Location = new System.Drawing.Point(594, 145);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.OnHoverBaseColor = System.Drawing.Color.Goldenrod;
-            this.btnTimKiem.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnTimKiem.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.OnHoverImage = null;
-            this.btnTimKiem.OnPressedColor = System.Drawing.Color.Black;
-            this.btnTimKiem.Radius = 10;
-            this.btnTimKiem.Size = new System.Drawing.Size(48, 32);
-            this.btnTimKiem.TabIndex = 21;
-            this.btnTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtMaCS
-            // 
-            this.txtMaCS.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtMaCS.BorderColor = System.Drawing.Color.Silver;
-            this.txtMaCS.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaCS.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtMaCS.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
-            this.txtMaCS.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtMaCS.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaCS.ForeColor = System.Drawing.Color.Black;
-            this.txtMaCS.Location = new System.Drawing.Point(27, 68);
-            this.txtMaCS.Name = "txtMaCS";
-            this.txtMaCS.PasswordChar = '\0';
-            this.txtMaCS.ReadOnly = true;
-            this.txtMaCS.SelectedText = "";
-            this.txtMaCS.Size = new System.Drawing.Size(136, 32);
-            this.txtMaCS.TabIndex = 44;
             // 
             // FCuonSach
             // 

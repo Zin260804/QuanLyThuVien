@@ -13,16 +13,14 @@ namespace QuanLyThuVien.DTO
         private string matt;
         private DateTime ngaymuon;
         private DateTime ngaytra;
-        private List<ChiTietPhieuMuon> chitietphiemuonlist;
 
-        public PhieuMuon(string mapm, string madg, string matt, DateTime ngaymuon, DateTime ngaytra, List<ChiTietPhieuMuon> chitietphiemuonlist)
+        public PhieuMuon(string mapm, string madg, string matt, DateTime ngaymuon, DateTime ngaytra)
         {
-            this.mapm = mapm;
-            this.madg = madg;
-            this.matt = matt;
-            this.ngaymuon = ngaymuon;
-            this.ngaytra = ngaytra;
-            this.chitietphiemuonlist = chitietphiemuonlist;
+            this.Mapm = mapm;
+            this.Madg = madg;
+            this.Matt = matt;
+            this.Ngaymuon = ngaymuon;
+            this.Ngaytra = ngaytra;
         }
 
         public string Mapm { get => mapm; set => mapm = value; }
@@ -30,6 +28,13 @@ namespace QuanLyThuVien.DTO
         public string Matt { get => matt; set => matt = value; }
         public DateTime Ngaymuon { get => ngaymuon; set => ngaymuon = value; }
         public DateTime Ngaytra { get => ngaytra; set => ngaytra = value; }
-        internal List<ChiTietPhieuMuon> Chitietphiemuonlist { get => chitietphiemuonlist; set => chitietphiemuonlist = value; }
+        public int KiemTra()
+        {
+            if (string.IsNullOrEmpty(Mapm) || string.IsNullOrEmpty(Madg) || string.IsNullOrEmpty(Matt))
+            {
+                return 0; 
+            }
+            return 1; 
+        }
     }
 }

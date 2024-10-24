@@ -61,4 +61,6 @@ F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
 F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CopyComplete
 F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
-F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FMuonTra.resources
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FTaoPhieuMuon.resources
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.UCMenuMuonTra.resources
+F:\DBMS\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThuThu.FTraSach.resources

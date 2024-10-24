@@ -40,13 +40,13 @@
             this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.lblUser = new Guna.UI.WinForms.GunaLabel();
             this.pnlHienThi = new Guna.UI.WinForms.GunaPanel();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.lblTieuDe = new Guna.UI.WinForms.GunaLabel();
+            this.lblTacGia = new Guna.UI.WinForms.GunaLabel();
             this.lblNXB = new Guna.UI.WinForms.GunaLabel();
             this.lblDocGia = new Guna.UI.WinForms.GunaLabel();
-            this.lblTacGia = new Guna.UI.WinForms.GunaLabel();
             this.btnMuonTra = new Guna.UI.WinForms.GunaGradientTileButton();
             this.btnTacGia = new Guna.UI.WinForms.GunaGradientTileButton();
             this.btnNhaXuatBan = new Guna.UI.WinForms.GunaGradientTileButton();
@@ -190,7 +190,7 @@
             // 
             this.panel1.Controls.Add(this.gunaCirclePictureBox1);
             this.panel1.Controls.Add(this.gunaLabel1);
-            this.panel1.Controls.Add(this.gunaLabel2);
+            this.panel1.Controls.Add(this.lblUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -205,19 +205,19 @@
             this.gunaLabel1.ForeColor = System.Drawing.Color.White;
             this.gunaLabel1.Location = new System.Drawing.Point(44, 141);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(88, 25);
+            this.gunaLabel1.Size = new System.Drawing.Size(84, 25);
             this.gunaLabel1.TabIndex = 9;
-            this.gunaLabel1.Text = "Manager";
+            this.gunaLabel1.Text = "Thủ Thư";
             // 
-            // gunaLabel2
+            // lblUser
             // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(17, 169);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(143, 28);
-            this.gunaLabel2.TabIndex = 10;
-            this.gunaLabel2.Text = "Nguyễn Văn A";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(17, 169);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(143, 28);
+            this.lblUser.TabIndex = 10;
+            this.lblUser.Text = "Nguyễn Văn A";
             // 
             // pnlHienThi
             // 
@@ -249,6 +249,17 @@
             this.lblTieuDe.TabIndex = 0;
             this.lblTieuDe.Text = "Hệ thông quản lý thư viện";
             // 
+            // lblTacGia
+            // 
+            this.lblTacGia.AutoSize = true;
+            this.lblTacGia.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTacGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
+            this.lblTacGia.Location = new System.Drawing.Point(386, 8);
+            this.lblTacGia.Name = "lblTacGia";
+            this.lblTacGia.Size = new System.Drawing.Size(234, 41);
+            this.lblTacGia.TabIndex = 3;
+            this.lblTacGia.Text = "Quản lý tác giả";
+            // 
             // lblNXB
             // 
             this.lblNXB.AutoSize = true;
@@ -272,17 +283,6 @@
             this.lblDocGia.TabIndex = 1;
             this.lblDocGia.Text = "Quản lý độc giả";
             this.lblDocGia.Visible = false;
-            // 
-            // lblTacGia
-            // 
-            this.lblTacGia.AutoSize = true;
-            this.lblTacGia.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTacGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(188)))), ((int)(((byte)(167)))));
-            this.lblTacGia.Location = new System.Drawing.Point(386, 8);
-            this.lblTacGia.Name = "lblTacGia";
-            this.lblTacGia.Size = new System.Drawing.Size(234, 41);
-            this.lblTacGia.TabIndex = 3;
-            this.lblTacGia.Text = "Quản lý tác giả";
             // 
             // btnMuonTra
             // 
@@ -311,6 +311,7 @@
             this.btnMuonTra.Size = new System.Drawing.Size(138, 62);
             this.btnMuonTra.TabIndex = 16;
             this.btnMuonTra.Text = "QL mượn trả";
+            this.btnMuonTra.Click += new System.EventHandler(this.btnMuonTra_Click);
             // 
             // btnTacGia
             // 
@@ -505,7 +506,7 @@
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel2;
         private Guna.UI.WinForms.GunaPanel gunaPanel2;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private Guna.UI.WinForms.GunaLabel lblUser;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
         private Guna.UI.WinForms.GunaPanel pnlHienThi;

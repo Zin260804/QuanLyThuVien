@@ -68,6 +68,7 @@
     <Compile Include="DAL\DbConnection.cs" />
     <Compile Include="DAL\DocGiaDao.cs" />
     <Compile Include="DAL\NhaXuatBanDao.cs" />
+    <Compile Include="DAL\PhieuMuonDao.cs" />
     <Compile Include="DAL\TacGiaDao.cs" />
     <Compile Include="DAL\ViTriDao.cs" />
     <Compile Include="DTO\ViTri.cs" />
@@ -77,7 +78,6 @@
     <Compile Include="FDangNhap.Designer.cs">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="DTO\ChiTietPhieuMuon.cs" />
     <Compile Include="DTO\CuonSach.cs" />
     <Compile Include="DTO\DauSach.cs" />
     <Compile Include="DTO\DocGia.cs" />
@@ -112,11 +112,17 @@
     <Compile Include="QLSach\FDauSach.Designer.cs">
       <DependentUpon>FDauSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThuThu\FMuonTra.cs">
+    <Compile Include="ThuThu\FTaoPhieuMuon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThuThu\FMuonTra.Designer.cs">
-      <DependentUpon>FMuonTra.cs</DependentUpon>
+    <Compile Include="ThuThu\FTaoPhieuMuon.Designer.cs">
+      <DependentUpon>FTaoPhieuMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThuThu\FTraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThuThu\FTraSach.Designer.cs">
+      <DependentUpon>FTraSach.cs</DependentUpon>
     </Compile>
     <Compile Include="TrangChu\FManHinhChinh.cs">
       <SubType>Form</SubType>
@@ -148,6 +154,12 @@
     <Compile Include="UCMenu.Designer.cs">
       <DependentUpon>UCMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCMenuMuonTra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCMenuMuonTra.Designer.cs">
+      <DependentUpon>UCMenuMuonTra.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,8 +185,11 @@
     <EmbeddedResource Include="QLSach\FDauSach.resx">
       <DependentUpon>FDauSach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThuThu\FMuonTra.resx">
-      <DependentUpon>FMuonTra.cs</DependentUpon>
+    <EmbeddedResource Include="ThuThu\FTaoPhieuMuon.resx">
+      <DependentUpon>FTaoPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThuThu\FTraSach.resx">
+      <DependentUpon>FTraSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu\FManHinhChinh.resx">
       <DependentUpon>FManHinhChinh.cs</DependentUpon>
@@ -190,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCMenu.resx">
       <DependentUpon>UCMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCMenuMuonTra.resx">
+      <DependentUpon>UCMenuMuonTra.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

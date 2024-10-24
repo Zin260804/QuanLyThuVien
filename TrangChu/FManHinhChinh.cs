@@ -20,13 +20,19 @@ namespace QuanLyThuVien.ThuThu
         UCMenu ucmenu = new UCMenu();
         FTacGIa ftacgia = new FTacGIa();
         FCuonSachViTri fcuonsachvitri = new FCuonSachViTri();
+        FTaoPhieuMuon ftaophieumuon = new FTaoPhieuMuon();
+        UCMenuMuonTra ucmenumuontra = new UCMenuMuonTra();
+        FTraSach ftrasach = new FTraSach();
         public FManHinhChinh()
         {
             InitializeComponent();
             ucmenu.btnDauSach.Click += btnQuanLySach_Click;
             ucmenu.btnCuonSach.Click += btnQLCuonSach_Click;
             ucmenu.btnViTri.Click += btnQLViTri_Click;
-            ucmenu.btnCuonSachViTri.Click += btnCuonSachViTri_Click;  
+            ucmenu.btnCuonSachViTri.Click += btnCuonSachViTri_Click;
+            ucmenumuontra.btnMuonSach.Click += btnMuonTra_Click;
+            ucmenumuontra.btnTraSach.Click += btnTraSach_Click;
+            ftaophieumuon.Load += btnMuonTra_Click;
         }
    
         private void AddFormToPanel(Form form)
@@ -90,6 +96,7 @@ namespace QuanLyThuVien.ThuThu
         }
         void hienThiTieuDe()
         {
+            ucmenumuontra.Visible = false;
             ucmenu.Visible = false;
             lblTieuDe.Visible = false;
             lblNXB.Visible = false;
@@ -97,6 +104,18 @@ namespace QuanLyThuVien.ThuThu
             lblTacGia.Visible = false;
         }
 
-        
+        private void btnMuonTra_Click(object sender, EventArgs e)
+        {
+            AddFormToPanel(ftaophieumuon);
+            pnlMenu.Controls.Add(ucmenumuontra);
+            ucmenumuontra.Dock = DockStyle.Fill;
+            hienThiTieuDe();
+            ucmenumuontra.Visible = true;
+            
+        }
+        private void btnTraSach_Click(object sender, EventArgs e)
+        {
+            AddFormToPanel(ftrasach);           
+        }
     }
 }
