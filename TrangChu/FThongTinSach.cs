@@ -51,7 +51,7 @@ namespace QuanLyThuVien.TrangChu
 
         private void btnxuat_Click(object sender, EventArgs e)
         {
-           /* string directoryPath = @"C:\DuLieuSachExcel";
+           string directoryPath = @"C:\DuLieuSachExcel";
             if (!System.IO.Directory.Exists(directoryPath))
             {
                 System.IO.Directory.CreateDirectory(directoryPath);
@@ -66,7 +66,7 @@ namespace QuanLyThuVien.TrangChu
             {
                 MessageBox.Show("Xuất file Excel thất bại.");
             }
-*/
+
 
 
         }

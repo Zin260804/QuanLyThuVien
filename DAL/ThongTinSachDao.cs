@@ -3,9 +3,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Windows.Forms;
-/*using ClosedXML.Excel;
 using OfficeOpenXml;
-*/
+
 
 namespace QuanLyThuVien.DAL
 {
@@ -55,7 +54,7 @@ namespace QuanLyThuVien.DAL
         }
 
         // Phương thức Export dữ liệu ra Excel
-        /*public bool XuatDuLieuSachExcel(string filePath)
+        public bool XuatDuLieuSachExcel(string filePath)
         {
             try
             {
@@ -108,7 +107,7 @@ namespace QuanLyThuVien.DAL
                 // Đảm bảo đóng kết nối sau khi thực hiện
                 DbConnection.Instance.CloseConnection();
             }
-        }*/
+        }
     }
 }
 
