@@ -104,6 +104,7 @@
     <Compile Include="DAL\TacGiaDao.cs" />
     <Compile Include="DAL\ThongKeDao.cs" />
     <Compile Include="DAL\ThongTinSachDao.cs" />
+    <Compile Include="DAL\ThongTinViTriCuonSachDao.cs" />
     <Compile Include="DAL\ThuThuDao.cs" />
     <Compile Include="DAL\ViTriDao.cs" />
     <Compile Include="DTO\ViTri.cs" />

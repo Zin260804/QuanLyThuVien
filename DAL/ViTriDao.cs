@@ -126,5 +126,30 @@ namespace QuanLyThuVien.DAL
                 DbConnection.conn.Close();
             }
         }
+        public DataTable LocViTri(string trangThai)
+        {
+            try
+            {
+                DbConnection.Instance.OpenConnection();
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Func_LocViTri(@TrangThai)", DbConnection.conn))
+                {
+                    cmd.Parameters.AddWithValue("@TrangThai", trangThai);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                DbConnection.Instance.CloseConnection();
+            }
+        }
+
     }
 }

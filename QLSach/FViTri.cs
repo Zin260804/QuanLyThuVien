@@ -72,12 +72,33 @@ namespace QuanLyThuVien.ThuThu
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
+            rdbDacosach.Checked = false;
+            rdbChuacosach.Checked = false;
+            dtViTri.DataSource = vitridao.LoadViTri();
             txtTimKiem.Text = "";
             txtNgan.Text = "";
             txtMaVT.Text = "";
             txtKhuVuc.Text = "";
             txtKe.Text = "";
             FViTri_Load(sender, e);
+        }
+
+        private void rdbDacosach_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbDacosach.Checked)
+            {
+                dtViTri.DataSource = vitridao.LocViTri("Đã có sách");
+            }
+
+        }
+
+        private void rdbChuacosach_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbChuacosach.Checked)
+            {
+                dtViTri.DataSource = vitridao.LocViTri("Chưa có sách");
+            }
+
         }
     }
 }
